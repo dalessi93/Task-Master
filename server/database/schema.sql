@@ -14,5 +14,6 @@ CREATE TABLE posts(
     state VARCHAR(10),
     completed BOOLEAN,
     user_id int,
-    CONSTRAINT fk_posts_users_user_id FOREIGN KEY (user_id) REFERENCES users (user_id)
+    CONSTRAINT fk_posts_users_user_id FOREIGN KEY (user_id) REFERENCES users (user_id),
+    category VARCHAR(20),
 );
