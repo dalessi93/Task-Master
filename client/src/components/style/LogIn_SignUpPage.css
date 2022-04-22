@@ -1,0 +1,13 @@
+.error{
+    background-color: red;
+}
+.foot{
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.foot .link a{
+    text-decoration: none;
+    color: rgb(3, 126, 187);
+    
+}

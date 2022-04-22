@@ -1,4 +1,4 @@
-import { Navbar } from "./dashboard/Navbar";
+import { Navbar } from "./sub-components/Navbar";
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 
 export function AccountPage(){

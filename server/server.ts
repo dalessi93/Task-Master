@@ -10,7 +10,8 @@ import expressSession from 'express-session';
 const pgSession = require('connect-pg-simple')(expressSession);
 
 // Imports
-import usersController from './controllers/users/index'
+import signupController from './controllers/users/index';
+import sessionController from './controllers/session/index';
 
 const PORT =
     process.env.PORT || (process.env.NODE_ENV === "production" && 3000) || 3001;
@@ -45,7 +46,8 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Controllers
-app.use('/api/users', usersController);
+app.use('/api/signup', signupController);
+app.use('/api/session', sessionController);
 
 
 app.listen(+PORT, () => {

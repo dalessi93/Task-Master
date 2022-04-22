@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import './dashboard.css'
+import '../style/Navbar.css'
 import { FaUserCircle} from 'react-icons/fa'
 import { RiToolsFill } from 'react-icons/ri'
 import { BsBookmarkPlus } from 'react-icons/bs'
