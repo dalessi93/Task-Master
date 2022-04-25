@@ -1,0 +1,12 @@
+.viewpost-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.post{
+    justify-content: center;
+}
+.post a{
+    text-decoration: none;
+    color: black;
+}

@@ -1,10 +1,22 @@
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import './style/LogIn_SignUpPage.css'
 import { BsArrowReturnLeft} from "react-icons/bs"
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
+import { ActionType, ApplicationContext } from './context/application-context'
 
 export function LogInPage(){
+
+    const [appState, appAction] = useContext(ApplicationContext);
+    
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if(appState.currentUser !== null){
+            navigate("/account/myJobs")
+        }
+    }, [appState.currentUser]);
+
     const [loginData, setLoginData] = useState({
         email: "",
         password: "",
@@ -17,19 +29,33 @@ export function LogInPage(){
     const [errorMessage, setErrorMessage] = useState("")
 
     const login = () => {
+        const body = {
+            email: loginData.email,
+            password: loginData.password
+        };
+
         if(loginData.email === "" || loginData.password === ""){
             setErrorMessage("Ops! seems you forgot some details.")
-        }
-
-        if(loginData.email != "" && loginData.password != ""){
+        }else if(loginData.email != "" && loginData.password != ""){
             axios
-                .post('api/sessions', {
-                    email: loginData.email,
-                    password:loginData.password,
-                }).then((response: any) =>{
-                    // useNavigate('/account');
-                    console.log(response)
+                .post('/api/session', body)
+                .then((response: any) =>{
+                    console.log(response);
+                    if (response.data) {
+                        appAction({
+                            type: ActionType.LOGIN,
+                            payload: {
+                                user: response.data
+                            },
+                        });
+                    }
                 })
+                .catch((error) => {
+                    if(error.response){
+                        console.log(error.response.data);
+                        setErrorMessage('Incorrect login details! please try again.');
+                    }
+                });
         }
     }
 

@@ -1,6 +1,9 @@
 .error{
     background-color: red;
 }
+.success{
+    background-color: greenyellow;
+}
 .foot{
     border-top: 2px solid black;
     display: flex;

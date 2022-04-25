@@ -2,7 +2,7 @@ import { db } from "../database/db";
 
 export const Posts = {
     getAll: () => {
-        const query = 'SELECT * FROM posts';
+        const query = 'SELECT * FROM posts ORDER BY post_id DESC';
         return db.query(query).then((response: any) => {
             return response.rows;
         });
@@ -27,6 +27,14 @@ export const Posts = {
         const query = 'SELECT * FROM posts WHERE state = $1';
         return db
             .query(query, [state])
+            .then((response: any) => {
+                return response.rows;
+            });
+    },
+    getByCategorySuburb: (category: any, state: any) => {
+        const query = 'SELECT * FROM posts WHERE category = $1 AND state = $2';
+        return db
+            .query(query, [category, state])
             .then((response: any) => {
                 return response.rows;
             });

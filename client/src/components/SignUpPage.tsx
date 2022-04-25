@@ -1,10 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './style/LogIn_SignUpPage.css'
 import { BsArrowReturnLeft} from "react-icons/bs"
 import { useState } from 'react';
 import axios from 'axios'
 
 export function SignUpPage(){
+    const navigate = useNavigate();
+
     const [createAccount, setcreateAccount] = useState({
         email: "",
         password: "",
@@ -16,7 +18,8 @@ export function SignUpPage(){
         setcreateAccount({...createAccount, [key]: value});
     }
 
-    const [errorMessage, setErrorMessage] = useState("")
+    const [errorMessage, setErrorMessage] = useState("");
+    const [successMessage, setSuccessMessage] = useState("");
 
     const signUp = () => {
         if(createAccount.email === "" || createAccount.password === "" || createAccount.password2 === "" || createAccount.username === ""){
@@ -29,7 +32,12 @@ export function SignUpPage(){
                 password: createAccount.password,
                 username: createAccount.username
             }).then((response: any) => response.data).then((data: any) => {
+                setSuccessMessage("Account has been created! redirecting...")
                 console.log("account created")
+                setErrorMessage("")
+                setTimeout(() => {
+                    navigate("/login")
+                }, 3000);
             })
         }
 
@@ -79,6 +87,9 @@ export function SignUpPage(){
                             <input type="username" value={createAccount.username} onChange={(event: any) => {
                                 handleChange("username", event.target.value)
                             }}/>
+                        </div>
+                        <div className='success'>
+                            {successMessage}
                         </div>
                         <div className='error'>
                             {errorMessage}
