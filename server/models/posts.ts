@@ -31,13 +31,31 @@ export const Posts = {
                 return response.rows;
             });
     },
-    getByCategorySuburb: (category: any, state: any) => {
-        const query = 'SELECT * FROM posts WHERE category = $1 AND state = $2';
-        return db
-            .query(query, [category, state])
-            .then((response: any) => {
-                return response.rows;
-            });
+    getByFilter: (category: any, suburb: any, state: any,) => {
+        let query = `SELECT * FROM posts`;
+        let params = [];
+        let where = [];
+
+        if(category){
+            params.push(category);
+            where.push(`category = $${params.length}`);
+        }
+        if(suburb){
+            params.push(suburb);
+            where.push(`suburb = $${params.length}`);
+        }
+        if(state){
+            params.push(state);
+            where.push(`state = $${params.length}`);
+        }
+
+        if(where.length){
+            query += ` WHERE ${where.join(` AND `)}`
+        }
+        
+        return db.query(query, params).then((response: any) =>{
+            return response.rows
+        });
     },
     create: ({ title, post, suburb, state, completed, user_id, category }) => {
         const query = 'INSERT INTO posts (title, post, suburb, state, completed, user_id, category) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING *';

@@ -5,6 +5,10 @@
 }
 .post{
     justify-content: center;
+    border: 3px solid black;
+    margin: 5px 60px 5px 60px;
+    cursor: pointer;
+    /* border-radius: 50%; */
 }
 .post a{
     text-decoration: none;

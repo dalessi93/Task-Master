@@ -4,19 +4,24 @@ import { Link } from "react-router-dom";
 import { ApplicationContext } from "../context/application-context";
 import '../style/PostView.css'
 
-export function PostView(){
+export function PostView(props: any){
     const [posts, setPosts] = useState<any>()
-
     const [{currentUser}, appAction] = useContext(ApplicationContext);
+
+    
+    const categoryFilter: any = props.category;
+    const suburbFilter: any  = props.suburb;
+    const stateFilter: any  = props.state;
+
 
     useEffect(() => {
         axios
-            .get('/api/post')
+            .get('/api/post/filter', {params:{ category: categoryFilter, suburb: suburbFilter, state: stateFilter }})
             .then((response: any) => response.data)
             .then((data: any) => {
                 setPosts(data);
             });
-    }, []);
+    }, [categoryFilter, suburbFilter, stateFilter]);
 
     return(
         <div className="viewpost-container">

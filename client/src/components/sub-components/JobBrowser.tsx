@@ -1,11 +1,12 @@
-import { PostFilter } from "./PostFilter";
+import { usePostFilter } from "./PostFilter";
 import { PostView } from "./PostView";
 
-export function JobBrowser(){
+export function JobBrowser(props: any){
+    const {render, category, suburb, state} = usePostFilter()
     return(
         <div>
-            <PostFilter/>
-            <PostView/>
+            {render}
+            <PostView category={category} suburb={suburb} state={state}/>
         </div>
     )
 }
