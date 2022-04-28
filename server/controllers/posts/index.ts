@@ -29,9 +29,23 @@ const router = express.Router();
 
 router.get("/filter", (req, res) => {
   
-    Posts.getByFilter(req.query.category, req.query.suburb, req.query.state).then((response: any) => {
+    Posts.getByFilter(req.query.category, req.query.suburb, req.query.state, req.query.id).then((response: any) => {
       res.json(response);
     });
+});
+
+router.post('/', (req: any, res: any) => {
+  Posts.create(req.body).then((response: any) => {
+      res.status(201).json(response);
+  });
+});
+
+router.delete('/:id([0-9]+)', (req: any, res: any) => {
+  Posts.delete(req.params.id).then((response: any) => {
+      if (response) {
+          res.json({ status: true, message: 'Post deleted' });
+      }
+  });
 });
 
 export default router;

@@ -40,8 +40,6 @@ export function SignUpPage(){
                 }, 3000);
             })
         }
-
-        // axios request here
     }
 
     return (

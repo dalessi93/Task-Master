@@ -1,0 +1,87 @@
+.modalBackground {
+    width: 87.75vw;
+    height: 100vh;
+    background-color: rgba(80, 80, 80, 0.6);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalContainer {
+    width: 600px;
+    height: 600px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+.modalContainer .modalTitle{
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+.topCloseBtn{
+    display: flex;
+    justify-content: flex-end;
+}
+.topCloseBtn button{
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+.topCloseBtn button:hover{
+    background-color: crimson;
+}
+
+.modalContainer .modalFooter{
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContainer .modalFooter button{
+    width: 100px;
+    height: 25px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    /* color: white; */
+    border-radius: 8px;
+    font-size: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.modalContainer .modalFooter .modalCancelBtn:hover{
+    background-color: crimson;
+}
+
+.modalFilter{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 47px 0 40px;
+}
+
+.modalFilter div {
+    padding: 5px;
+    
+}
+.modalBackground .modalContainer .modalBody .title label{
+    margin-right: 476px;
+}
+.modalBackground .modalContainer .modalBody .title input{
+    width: 500px;
+}
+.modalBackground .modalContainer .modalBody .description label{
+    margin-right: 390px;
+}
+.modalBackground .modalContainer .modalBody .description textarea{
+    width: 500px;
+    height: 130px;
+}
+.modalBody div{
+    margin-top: 15px;
+}

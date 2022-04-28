@@ -6,7 +6,7 @@ export function JobBrowser(props: any){
     return(
         <div>
             {render}
-            <PostView category={category} suburb={suburb} state={state}/>
+            <PostView category={category} suburb={suburb} state={state} id={null}/>
         </div>
     )
 }

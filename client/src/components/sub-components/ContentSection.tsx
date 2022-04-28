@@ -5,12 +5,14 @@ import '../style/ContentSection.css'
 import { FocusPost } from './FocusPost';
 import { JobBrowser } from './JobBrowser'
 import { MyJobs } from './MyJobs'
+import { SettingsPage } from './SettingsPage';
 
 export function ContentSection(){
 
     return(
         <div className="content-section">
             <Routes>
+                <Route path="settings" element={<SettingsPage />} />
                 <Route path="myJobs/*" element={<MyJobs />} />
                 <Route path="jobBrowser/:id" element={<FocusPost />} />
                 <Route path="jobBrowser" element={<JobBrowser />} />

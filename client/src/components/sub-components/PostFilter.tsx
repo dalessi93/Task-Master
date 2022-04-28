@@ -56,8 +56,8 @@ export function usePostFilter(){
     )}
 }
 
-const categoryArray = ['Electricians', 'Mechanic', 'Removals'];
+export const categoryArray = ['Electricians', 'Mechanic', 'Removals'];
 
-const suburbArray = ['Mascot', 'Bondi', ];
+export const suburbArray = ['Mascot', 'Bondi', ];
 
-const stateArray = ['NSW', 'VIC', 'QLD', 'WA', 'SA', 'TAS', 'ACT', 'NT'];
+export const stateArray = ['NSW', 'VIC', 'QLD', 'WA', 'SA', 'TAS', 'ACT', 'NT'];
