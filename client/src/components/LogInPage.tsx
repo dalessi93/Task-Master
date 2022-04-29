@@ -40,7 +40,7 @@ export function LogInPage(){
             axios
                 .post('/api/session', body)
                 .then((response: any) =>{
-                    console.log(response);
+                    // console.log(response);
                     if (response.data) {
                         appAction({
                             type: ActionType.LOGIN,
@@ -72,17 +72,17 @@ export function LogInPage(){
             </div>
             {/* Body */}
             <div className="home-content">
-                <div>
+                <div className='access-form'>
                     <h3>Log In</h3>
                     <div>
-                        <div>
+                        <div className='section'>
                             <label>Email:</label>
                             <br />
                             <input type="email" value={loginData.email} onChange={(event: any) => {
                                 handleChange("email", event.target.value)
                             }}/>
                         </div>
-                        <div>
+                        <div className='section'>
                             <label>Password:</label>
                             <br />
                             <input type="password" value={loginData.password} onChange={(event: any) => {
@@ -92,7 +92,7 @@ export function LogInPage(){
                         <div className='error'>
                             {errorMessage}
                         </div>
-                        <div>
+                        <div className='submit'>
                             <input type="submit" value="Continue" onClick={login} />
                         </div>
                         <div className="foot">

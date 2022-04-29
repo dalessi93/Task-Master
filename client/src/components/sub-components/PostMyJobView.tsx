@@ -26,19 +26,25 @@ export function PostMyJobView(props: any){
             });
     }, [categoryFilter, suburbFilter, stateFilter, idFilter]);
 
+    
     return(
         <div className="viewpost-container">
             {openModalDelete && <ModalDelete closeModal={setOpenModalDelete} post_id={deletePostId}/>}
             {posts && posts.map((post: any) => {
                 return(
                     <div className="post" key={post.post_id}>
-                        <div className="top-post">
-                            <h3>{post.title}</h3>
-                            <div>{post.suburb}, {post.state}</div>
+                        <div className="ad">
+                            <div className="top-post">
+                                <h3>{post.title}</h3>
+                                <div>{post.category}</div>
+                            </div>
+                            <p>{post.post}</p>
+                            <span>Location: {post.suburb}, {post.state}</span>
                         </div>
-                        <p>{post.post}</p>
-                        <span>{post.category}</span>
-                        <button onClick={() => {setOpenModalDelete(true); setdeletePostId(post.post_id)}}>delete</button>
+                        <div className="divider"></div>
+                        <div className="delete-post">
+                            <button onClick={() => {setOpenModalDelete(true); setdeletePostId(post. post_id)}}>Delete</button>
+                        </div>
                     </div>
                 )
             })}

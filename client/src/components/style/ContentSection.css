@@ -5,4 +5,6 @@
     min-height: 100%;
     width: 87.75vw;
     height: 100vh;
+    overflow: scroll;
+    padding: 0;
 }

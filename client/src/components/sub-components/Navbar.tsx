@@ -37,7 +37,8 @@ export function Navbar(){
                 <div className="logo">Task Master</div>
                 <div className="menu">
                     <div className="avatar">
-                        <span><Link to="settings"><FaUserCircle/></Link></span>
+                        {/* <span><Link to="settings"><FaUserCircle/></Link></span> */}
+                        <span><FaUserCircle/></span>
                     </div>
                 </div>
             </div>
@@ -50,11 +51,11 @@ export function Navbar(){
                         <li>
                             <Link to="jobBrowser"><span className='icon'><RiToolsFill/></span><span className='text'>Job Browser</span></Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="jobBrowser/1"><span className='icon'>❔</span><span className='text'>Something</span></Link>
-                        </li>
+                        </li> */}
                         <li>
-                            <Link to="/"><span className='icon'>❔</span><span className='text'>Something</span></Link>
+                            <Link to="/"><span className='icon'>❔</span><span className='text'>Live Chat</span></Link>
                         </li>
                         
                     </ul>

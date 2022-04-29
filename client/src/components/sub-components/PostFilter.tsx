@@ -56,8 +56,8 @@ export function usePostFilter(){
     )}
 }
 
-export const categoryArray = ['Electricians', 'Mechanic', 'Removals'];
+export const categoryArray = ['Accounting', 'Appliances', 'Barber', 'Bricklayer', 'Car Detailing', 'Car Wash', 'Carpet Cleaning', 'Cleaning', 'Dog Care', 'Electricians', 'Florist', 'Handyman', 'Landscaping', 'Mechanic', 'Painting', 'Removals'];
 
-export const suburbArray = ['Mascot', 'Bondi', ];
+export const suburbArray = ['Mascot', 'Bondi', 'Annandale', 'Hampton', 'Currumbin', 'Launceston', 'Gidgegannup', 'Unley', 'Fannie Bay', 'Yarralumla', 'Goodwood', 'Killarney Heights', 'Diamond Valley', 'Sassafras', 'Regency Park', 'Holder', 'Anula', 'Coolbinia'];
 
 export const stateArray = ['NSW', 'VIC', 'QLD', 'WA', 'SA', 'TAS', 'ACT', 'NT'];

@@ -55,52 +55,54 @@ export function SignUpPage(){
             </div>
             {/* Body */}
             <div className="home-content">
-                <div>
-                    <h3>Sign Up</h3>
+                <div className='access-form-2'>
                     <div>
+                        <h3>Sign Up</h3>
                         <div>
-                            <label>Email:</label>
-                            <br />
-                            <input type="email" value={createAccount.email} onChange={(event: any) => {
-                                handleChange("email", event.target.value)
-                            }}/>
-                        </div>
-                        <div>
-                            <label>Password:</label>
-                            <br />
-                            <input type="password" value={createAccount.password} onChange={(event: any) => {
-                                handleChange("password", event.target.value)
-                            }}/>
-                        </div>
-                        <div>
-                            <label>Confirm Password:</label>
-                            <br />
-                            <input type="password" value={createAccount.password2} onChange={(event: any) => {
-                                handleChange("password2", event.target.value)
-                            }}/>
-                        </div>
-                        <div>
-                            <label>Username:</label>
-                            <br />
-                            <input type="username" value={createAccount.username} onChange={(event: any) => {
-                                handleChange("username", event.target.value)
-                            }}/>
-                        </div>
-                        <div className='success'>
-                            {successMessage}
-                        </div>
-                        <div className='error'>
-                            {errorMessage}
-                        </div>
-                        <div>
-                            <input type="submit" value="Continue" onClick={signUp} />
-                        </div>
-                        <div className="foot">
-                            <div>
-                                Already have an account?
+                            <div className='section'>
+                                <label>Email:</label>
+                                <br />
+                                <input type="email" value={createAccount.email} onChange={(event: any) => {
+                                    handleChange("email", event.target.value)
+                                }}/>
                             </div>
-                            <div>
-                                <span className='link'><Link to="/login">Log in</Link></span>
+                            <div className='section'>
+                                <label>Password:</label>
+                                <br />
+                                <input type="password" value={createAccount.password} onChange={(event: any) => {
+                                    handleChange("password", event.target.value)
+                                }}/>
+                            </div>
+                            <div className='section'>
+                                <label>Confirm Password:</label>
+                                <br />
+                                <input type="password" value={createAccount.password2} onChange={(event: any) => {
+                                    handleChange("password2", event.target.value)
+                                }}/>
+                            </div>
+                            <div className='section'>
+                                <label>Username:</label>
+                                <br />
+                                <input type="username" value={createAccount.username} onChange={(event: any) => {
+                                    handleChange("username", event.target.value)
+                                }}/>
+                            </div>
+                            <div className='success'>
+                                {successMessage}
+                            </div>
+                            <div className='error'>
+                                {errorMessage}
+                            </div>
+                            <div className='submit'>
+                                <input type="submit" value="Continue" onClick={signUp} />
+                            </div>
+                            <div className="foot">
+                                <div>
+                                    Already have an account?
+                                </div>
+                                <div>
+                                    <span className='link'><Link to="/login">Log in</Link></span>
+                                </div>
                             </div>
                         </div>
                     </div>

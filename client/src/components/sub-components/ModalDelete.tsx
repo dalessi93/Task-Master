@@ -21,8 +21,8 @@ export function ModalDelete(props: any){
     };
 
     return(
-        <div className="modalBackground">
-            <div className="modalContainer">
+        <div className="modalDeleteBackground">
+            <div className="modalDeleteContainer">
 
                 <div className='topCloseBtn'>
                     <button onClick={()=>{closeModal(false)}}> X </button>

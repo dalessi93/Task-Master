@@ -73,10 +73,12 @@ ul{
     display: block;
     color: white;
     border-bottom: 1px solid #03374e;
+    border-top: 1px solid #03374e;
     padding: 16px 25px;
     text-decoration: none;
     text-align: left;
     cursor: pointer;
+    margin-top: 615px;
 }
 .logout .icon{
     font-size: 18px;

@@ -17,6 +17,11 @@ router.post('/', (req: any, res: any, next) =>{
     });
 })
 
+// router.get("/:id([0-9]+)", (req, res) => {
+//     Users.getById(req.params.id).then((response: any) => {
+//     res.json(response);
+//     });
+// });
 
 
 export default router;

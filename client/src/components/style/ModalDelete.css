@@ -1,4 +1,4 @@
-.modalBackground {
+.modalDeleteBackground {
     width: 87.75vw;
     height: 149vh;
     background-color: rgba(80, 80, 80, 0.6);
@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
 }
-.modalContainer {
+.modalDeleteContainer {
     width: 600px;
     height: 200px;
     border-radius: 12px;
@@ -17,7 +17,7 @@
     flex-direction: column;
     padding: 25px;
 }
-.modalContainer .modalTitle{
+.modalDeleteContainer .modalTitle{
     display: inline-block;
     text-align: center;
     margin-top: 10px;
@@ -36,14 +36,14 @@
     background-color: crimson;
 }
 
-.modalContainer .modalFooter{
+.modalDeleteContainer .modalFooter{
     flex: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.modalContainer .modalFooter button{
+.modalDeleteContainer .modalFooter button{
     width: 100px;
     height: 25px;
     margin: 10px;
@@ -55,6 +55,6 @@
     cursor: pointer;
     font-size: 20px;
 }
-.modalContainer .modalFooter .modalCancelBtn:hover{
+.modalDeleteContainer .modalFooter .modalCancelBtn:hover{
     background-color: crimson;
 }

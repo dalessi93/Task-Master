@@ -48,4 +48,73 @@
     left: 0;
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.timed-message{
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+
+}
+.timed-message .message{
+    font-size: 50px;
+    font-weight: bold;
+    margin-right: 40px;
+    text-align: left;
+}
+.timed-message .message span{
+    color:#0976e2
+}
+
+.background1{
+    background-image: url(../img/andrew-wise-LfSyYwMHBYQ-unsplash.jpg);
+    height: 400px;
+    width: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+.background2{
+    background-image: url(../img/hiveboxx-FwdWO5yEo5s-unsplash.jpg);
+    height: 400px;
+    width: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+.background3{
+    background-image: url(../img/jimmy-nilsson-masth-UovTD1dG-lA-unsplash.jpg);
+    height: 400px;
+    width: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+.bottom{
+    margin-top: 100px;
+}
+.bottom h3{
+    font-size: 25px;
+}
+.bottom div{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom div div{
+    padding-left: 100px;
+}
+.bottom div span{
+    padding: 0 10px 0 10px;
+    margin-right: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    height: 25px;
+
 }

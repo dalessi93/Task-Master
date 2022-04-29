@@ -31,11 +31,12 @@ export function PostView(props: any){
                         <div className="ad">
                             <div className="top-post">
                                 <h3>{post.title}</h3>
-                                <div>{post.suburb}, {post.state}</div>
+                                <div>{post.category}</div>
                             </div>
                             <p>{post.post}</p>
-                            <span>{post.category}</span>
+                            <span>Location: {post.suburb}, {post.state}</span>
                         </div>
+                        <div className="divider"></div>
                         <div className="contact-details">
                             <h3>Contact</h3>
                             <div>Creator: {post.username}</div>

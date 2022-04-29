@@ -6,6 +6,28 @@ CREATE TABLE users(
     mobile int,
 );
 
+INSERT INTO
+    users (email, password, username, mobile)
+VALUES
+    (
+        'test3@gmail.com',
+        '$2b$10$CohrPIyOtNAZDnthhJV8Z.ZeFcCPPI5RC2zzpDyjvx/2NOtZGRSiK',
+        'Bob',
+        0467 8971 1989
+    ),
+    (
+        'test4@gmail.com',
+        '$2b$10$tFYuPBqo9Sf76ABm0br9keSrPymuecJPZ3OOl4KMzQ4QLtBx5gMv.',
+        'Pablo',
+        0488 6774 1285
+    ),
+    (
+        'test5@gmail.com',
+        '$2b$10$K1U/qovc8AwwkGTOpa4iOegBJpq8FQCb/OTOClrgX/cN0gD4ZEamm',
+        'John',
+        0453 7643 9274
+    );
+
 CREATE TABLE posts(
     post_id SERIAL PRIMARY KEY NOT NULL,
     title VARCHAR(120),

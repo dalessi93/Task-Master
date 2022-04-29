@@ -1,3 +1,47 @@
+.home-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.access-form{
+    border: 3px solid black;
+    border-radius: 9%;
+    width: 500px;
+    height: 350px;
+}
+.access-form-2{
+    border: 3px solid black;
+    border-radius: 9%;
+    width: 500px;
+    height: 520px;
+}
+h3{
+    font-size: 30px;
+}
+.section label{
+    font-size: 20px;
+
+}
+.section input{
+    height: 25px;
+    width: 300px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.submit{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.submit input{
+    height: 25px;
+    width: 150px;
+    font-size: 15px;
+    color: white;
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 10%;
+}
 .error{
     background-color: red;
 }
@@ -8,6 +52,7 @@
     border-top: 2px solid black;
     display: flex;
     justify-content: space-between;
+    padding: 5px 15px 0 15px;
 }
 .foot .link a{
     text-decoration: none;
