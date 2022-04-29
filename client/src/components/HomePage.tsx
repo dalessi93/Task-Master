@@ -6,7 +6,7 @@ export function HomePage(){
     const [usePhrase, setUsePhrase] = useState("photography");
     const [useImage, setUseImage] = useState("background1");
 
-    const phrases: any= ["photography", "moving in", "home maintenence"]
+    const phrases: any= ["photography", "moving in", "home maintenance"]
     const imgClass: any = ["background1", "background2", "background3"]
 
     useEffect(() => {

@@ -9,7 +9,7 @@ export const Users = {
         });
     },
     getById: (id: any) => {
-        const query = 'SELECT * FROM users WHERE id = $1';
+        const query = 'SELECT * FROM users WHERE user_id = $1';
         return db
             .query(query, [id])
             .then((response: any) => {
@@ -30,6 +30,14 @@ export const Users = {
             .query(query, [email, password, username])
             .then((response: any) => {
                 return response.rows && response.rows.length > 0 ? response.rows[0] : null;
+            });
+    },
+    update: (email: any, username: any, mobile: any, id: any) => {
+        const query = `UPDATE users SET email = $1, username = $2, mobile = $3 WHERE user_id = $4 RETURNING *`;
+        return db
+            .query(query, [email, username, mobile, id])
+            .then((response: any) => {
+                return response.rows ? response.rows[0] : {};
             });
     },
 }

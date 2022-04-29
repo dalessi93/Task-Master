@@ -12,7 +12,7 @@ export function ContentSection(){
     return(
         <div className="content-section">
             <Routes>
-                {/* <Route path="settings" element={<SettingsPage />} /> */}
+                <Route path="settings" element={<SettingsPage />} />
                 <Route path="myJobs/*" element={<MyJobs />} />
                 <Route path="jobBrowser/:id" element={<FocusPost />} />
                 <Route path="jobBrowser" element={<JobBrowser />} />

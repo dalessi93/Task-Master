@@ -1,5 +1,5 @@
 # Task Master
-SEI - Project 4 - Live Version
+SEI - Project 4 - [Live Version](https://task-master-sei.herokuapp.com/)
 
 ## Necessary Deliverables
 - A link to your hosted working app in the URL section of your GitHub repo
@@ -22,5 +22,3 @@ Other users are able to check what tasks are available and complete them for a f
 - React
 - Express.js
 - Material UI
-
-

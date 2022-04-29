@@ -17,11 +17,17 @@ router.post('/', (req: any, res: any, next) =>{
     });
 })
 
-// router.get("/:id([0-9]+)", (req, res) => {
-//     Users.getById(req.params.id).then((response: any) => {
-//     res.json(response);
+router.get('/:id([0-9]+)', (req: any, res: any) => {
+    Users.getById(req.params.id).then((response: any) => {
+    res.json(response);
+    });
+});
+
+// router.patch('/:id([0-9]+)', (req: any, res: any) => {
+//     const { email, username, mobile, id} = req.body;
+//     Users.update(email, username, mobile, id).then((response: any) => {
+//         res.json({ message: 'Item updated' });
 //     });
 // });
-
 
 export default router;

@@ -1,0 +1,14 @@
+.settings-body div label{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.settings-body div input{
+    font-size: 20px;
+    margin-top: 5px;
+}
+.settings-footer{
+    margin-top: 10px;
+}
+.settings-footer button{
+    font-size: 20px;
+}

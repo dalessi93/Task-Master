@@ -37,8 +37,8 @@ export function Navbar(){
                 <div className="logo">Task Master</div>
                 <div className="menu">
                     <div className="avatar">
-                        {/* <span><Link to="settings"><FaUserCircle/></Link></span> */}
-                        <span><FaUserCircle/></span>
+                        <span><Link to="settings"><FaUserCircle/></Link></span>
+                        {/* <span><FaUserCircle/></span> */}
                     </div>
                 </div>
             </div>
