@@ -18,7 +18,26 @@ SEI - Project 4 - [Live Version](https://task-master-sei.herokuapp.com/)
 A website what allows the user to post tasks they need done. 
 Other users are able to check what tasks are available and complete them for a fee.
 
+## User Story
+- Customer needs some electrical intallation done, so instead of calling multiple electricians for quotes, he posts his job and wait for the electricians to send him quotes.
+- Need someone to take care of your dog/cat for a few days, post an add and get hundreds of offers.
+
+
 ## Technologies Used
 - React
+- React Icons
 - Express.js
 - Material UI
+- API
+- Axios
+- PostgreSQL
+
+## How to use
+1. Log in/Signup.
+2. Post an ad with ehat you need done.
+3. Compare quotes and get someone to do it for you.
+
+## Future Updates
+- Use [postcodeapi](https://postcodeapi.com.au/) for the filters.
+- Add a live chat
+- Add a map location for the jobs
