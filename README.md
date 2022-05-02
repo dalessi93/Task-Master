@@ -26,7 +26,7 @@ Other users are able to check what tasks are available and complete them for a f
 ## Technologies Used
 - React
 - React Icons
-- Express.js
+- Node.js
 - Material UI
 - API
 - Axios
